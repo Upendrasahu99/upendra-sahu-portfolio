@@ -1,126 +1,382 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upendra Sahu</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="boxicons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upendra Sahu — Full Stack Developer</title>
+    <meta name="description" content="Hi, I'm Upendra Sahu — a full stack developer who loves crafting clean, purposeful web experiences." />
 
-</head>
-<body>
-    <div class="container-fluid" id="main">
-        <div class="row p-5 border-bottom border-dark border-5" id="first">
-            <!-- <div class="col-md-2">
-                <img class="img-fluid" src="profile1.jpg" alt="">
-            </div> -->
-            <div class="col text-center">
-                <h1 class="section-heading" id="heading-name">Hii I am Upendra Sahu</h1>
-                <p class=""><b>Full Stack Developer</b></p>
-            </div>
-        </div>
+    <!-- DaisyUI + Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-        <!-- <div class="row p-5 border-bottom border-dark py-5 border-5" id="second">
-            <h3 class="section-heading">Project</h3>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
 
-            <div class="col-12 d-flex justify-content-evenly">
-                <div class="card border border-3 border-dark" style="width: 18rem;">
-                    <h5 class="card-title border-bottom border-dark border-3 text-center p-2">Project 1</h5>
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">project subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <button type="button" class="card-btn btn btn-secondary border border-2 border-dark btn-sm text-dark"><strong>button</strong></button>
-                    </div>
-                </div>
+    <!-- ─── NAVBAR ─────────────────────────────────────────────────── -->
+    <nav class="navbar fixed top-0 z-50 px-6 md:px-16 py-4 bg-base-100/80 backdrop-blur border-b border-base-content/5">
+      <div class="flex-1">
+        <a href="#" class="text-lg font-semibold tracking-tight text-base-content">upendra<span class="text-primary">.</span></a>
+      </div>
+      <div class="flex-none gap-6 hidden md:flex">
+        <a href="#experience" class="text-sm text-base-content/60 hover:text-base-content nav-link transition-colors">Experience</a>
+        <a href="#projects" class="text-sm text-base-content/60 hover:text-base-content nav-link transition-colors">Projects</a>
+        <a href="#blogs" class="text-sm text-base-content/60 hover:text-base-content nav-link transition-colors">Blogs</a>
+        <a href="#skills" class="text-sm text-base-content/60 hover:text-base-content nav-link transition-colors">Skills</a>
+      </div>
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-btn" class="btn btn-ghost btn-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
 
-                <div class="card border border-3 border-dark" style="width: 18rem;">
-                    <h5 class="card-title border-bottom border-dark border-3 text-center p-2">Project 1</h5>
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">project subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <button type="button" class="card-btn btn btn-secondary border border-2 border-dark btn-sm text-dark"><strong>button</strong></button>
-                    </div>
-                </div>
-
-                <div class="card border border-3 border-dark" style="width: 18rem;">
-                    <h5 class="card-title border-bottom border-dark border-3 text-center p-2">Project 1</h5>
-                    <div class="card-body">
-                      <h6 class="card-subtitle mb-2 text-muted">project subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <button type="button" class="card-btn btn btn-secondary border border-2 border-dark btn-sm text-dark"><strong>button</strong></button>
-                    </div>
-                </div>    
-            </div>
-        </div> -->
-
-
-        <div class="row p-5 border-bottom border-dark border-5" id="third">
-            <h3 class="section-heading">Skill</h3>
-
-            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-evenly" style="font-size: 1.5rem;">
-                <i class="ri-html5-fill"></i>
-                <span>html</span>
-            </div>
-            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-evenly" style="font-size: 1.5rem;">
-                <i class="ri-css3-fill"></i>
-                <span>css</span>
-            </div>
-            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-evenly" style="font-size: 1.5rem;">
-                <i class="ri-javascript-fill"></i>
-                <span>Javascript</span>
-            </div>
-            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-evenly" style="font-size: 1.5rem;">
-                <i class="ri-reactjs-fill"></i>
-                <span>reactJs</span>
-            </div>
-            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-evenly" style="font-size: 1.5rem;">
-                <i class="ri-bootstrap-fill"></i>
-                <span>reactJs</span>
-            </div>
-            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-evenly" style="font-size: 1.5rem;">
-                <i class='bx bxl-jquery'></i>
-                <span>jquery</span>
-            </div>
-            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-evenly" style="font-size: 1.5rem;">
-                <i class='bx bxl-git' ></i>
-                <span>git</span>
-            </div>
-            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-evenly" style="font-size: 1.5rem;">
-                <i class="ri-github-fill"></i>
-                <span>Github</span>
-            </div>
-            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-evenly" style="font-size: 1.5rem;">
-                <i class="ri-java-fill"></i>
-                <span>Github</span>
-            </div>
-            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-evenly" style="font-size: 1.5rem;">
-                <i class='bx bxl-php'></i>
-                <span>php</span>
-            </div>
-            <div class="col-4 col-md-2 d-flex flex-column align-items-center justify-content-evenly" style="font-size: 1.5rem;">
-                <i class='bx bxs-data'></i>
-                <span>mysql</span>
-            </div>
-
-        </div>
-
-
-        <div class="row px-5 border-dark border-5" id="fourth">
-            <h3 class="section-heading">Contact</h3>
-            <div class="col-12 d-flex justify-content-evenly p-3">
-                <i class="ri-linkedin-fill"></i>
-                <i class="ri-github-line"></i>
-                <i class="ri-stack-overflow-line"></i>
-                <i class="ri-twitter-x-fill"></i>
-                <i class="ri-instagram-line"></i>
-            </div>
-        </div>
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-base-100/95 backdrop-blur items-center justify-center flex-col gap-8 hidden md:hidden">
+      <button id="mobile-close" class="absolute top-6 right-6 btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <a href="#experience" class="mobile-link text-2xl font-light text-base-content/70 hover:text-base-content transition-colors">Experience</a>
+      <a href="#projects" class="mobile-link text-2xl font-light text-base-content/70 hover:text-base-content transition-colors">Projects</a>
+      <a href="#blogs" class="mobile-link text-2xl font-light text-base-content/70 hover:text-base-content transition-colors">Blogs</a>
+      <a href="#skills" class="mobile-link text-2xl font-light text-base-content/70 hover:text-base-content transition-colors">Skills</a>
     </div>
-</body>
+
+    <main class="px-6 md:px-16 max-w-3xl mx-auto pt-32 pb-20 space-y-28">
+
+      <!-- ─── HERO ───────────────────────────────────────────────────── -->
+      <section id="hero" class="fade-in-up">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-5 text-base-content">
+          Upendra Sahu
+        </h1>
+        <p class="text-base-content/60 text-base md:text-lg leading-relaxed max-w-xl mb-8">
+          Hey, I'm Upendra — a full stack developer who loves building clean, modern web apps where design, functionality, and the smallest details matter. I focus on crafting products that are both practical and visually satisfying.
+        </p>
+        <p class="text-base-content/50 text-sm md:text-base leading-relaxed max-w-xl mb-8">
+          I'm flexible with whatever the project needs, though I lean toward modern frameworks and tools. Always open to new opportunities to learn and grow.
+        </p>
+
+        <!-- Social links -->
+        <div class="flex flex-wrap gap-3 mt-2">
+          <a href="mailto:upendra@example.com" class="social-pill">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Email
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener" class="social-pill">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" class="social-pill">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Twitter
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://leetcode.com" target="_blank" rel="noopener" class="social-pill">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+            LeetCode
+          </a>
+        </div>
+      </section>
+
+      <!-- ─── EXPERIENCE ──────────────────────────────────────────────── -->
+      <section id="experience" class="fade-in-up">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="space-y-8 mt-6">
+
+          <div class="exp-card">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <div>
+                <h3 class="font-semibold text-base-content">Full Stack Developer Intern</h3>
+                <p class="text-sm text-base-content/50 mt-0.5">TechVenture Pvt. Ltd.</p>
+              </div>
+              <span class="exp-date">Jun 2024 – Present</span>
+            </div>
+            <p class="text-sm text-base-content/60 leading-relaxed">
+              Built and maintained scalable web applications using React, Node.js, and PostgreSQL. Improved API response times by 40% through query optimization and caching strategies.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-3">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Redis</span>
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <div>
+                <h3 class="font-semibold text-base-content">Open Source Contributor</h3>
+                <p class="text-sm text-base-content/50 mt-0.5">Various Projects · GitHub</p>
+              </div>
+              <span class="exp-date">2023 – Present</span>
+            </div>
+            <p class="text-sm text-base-content/60 leading-relaxed">
+              Contributed to several open source repositories, fixing bugs and adding features. Focused on improving documentation and test coverage for community projects.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-3">
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="flex items-start justify-between gap-4 mb-2">
+              <div>
+                <h3 class="font-semibold text-base-content">Frontend Developer</h3>
+                <p class="text-sm text-base-content/50 mt-0.5">Freelance · Remote</p>
+              </div>
+              <span class="exp-date">2022 – 2023</span>
+            </div>
+            <p class="text-sm text-base-content/60 leading-relaxed">
+              Designed and developed responsive web interfaces for small businesses. Delivered 10+ projects, ensuring pixel-perfect implementation from Figma designs.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-3">
+              <span class="tech-tag">HTML/CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Figma</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ─── PROJECTS ────────────────────────────────────────────────── -->
+      <section id="projects" class="fade-in-up">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="grid gap-5 mt-6">
+
+          <a href="#" class="project-card group" target="_blank" rel="noopener">
+            <div class="project-img-wrap">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" alt="CodeCollab project preview" class="project-img" />
+              <div class="project-overlay">
+                <span class="text-xs text-white font-medium tracking-wide">View Project →</span>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h3 class="font-semibold text-base-content group-hover:text-primary transition-colors">CodeCollab</h3>
+              <p class="text-sm text-base-content/55 mt-1.5 leading-relaxed">Real-time collaborative code editor with syntax highlighting, live cursor tracking, and integrated chat for remote pair programming sessions.</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Socket.IO</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Monaco Editor</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="project-card group" target="_blank" rel="noopener">
+            <div class="project-img-wrap">
+              <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80" alt="ShopStream project preview" class="project-img" />
+              <div class="project-overlay">
+                <span class="text-xs text-white font-medium tracking-wide">View Project →</span>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h3 class="font-semibold text-base-content group-hover:text-primary transition-colors">ShopStream</h3>
+              <p class="text-sm text-base-content/55 mt-1.5 leading-relaxed">A modern e-commerce platform with AI-powered product recommendations, inventory management, and real-time order tracking.</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Prisma</span>
+                <span class="tech-tag">Stripe</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="project-card group" target="_blank" rel="noopener">
+            <div class="project-img-wrap">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" alt="TaskFlow project preview" class="project-img" />
+              <div class="project-overlay">
+                <span class="text-xs text-white font-medium tracking-wide">View Project →</span>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h3 class="font-semibold text-base-content group-hover:text-primary transition-colors">TaskFlow</h3>
+              <p class="text-sm text-base-content/55 mt-1.5 leading-relaxed">A Kanban-style project management tool with drag-and-drop, team collaboration features, deadline reminders, and analytics dashboard.</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Redis</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="project-card group" target="_blank" rel="noopener">
+            <div class="project-img-wrap">
+              <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80" alt="DevMetrics project preview" class="project-img" />
+              <div class="project-overlay">
+                <span class="text-xs text-white font-medium tracking-wide">View Project →</span>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h3 class="font-semibold text-base-content group-hover:text-primary transition-colors">DevMetrics</h3>
+              <p class="text-sm text-base-content/55 mt-1.5 leading-relaxed">Developer productivity dashboard that aggregates GitHub activity, coding stats using WakaTime API, and CI/CD pipeline health metrics.</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">GitHub API</span>
+                <span class="tech-tag">Tailwind</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- ─── BLOGS ───────────────────────────────────────────────────── -->
+      <section id="blogs" class="fade-in-up">
+        <h2 class="section-title">Blogs</h2>
+
+        <div class="space-y-4 mt-6">
+
+          <a href="#" class="blog-card group" target="_blank" rel="noopener">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <h3 class="font-medium text-base-content group-hover:text-primary transition-colors leading-snug truncate-2">Building Scalable REST APIs with Node.js and Express</h3>
+                <p class="text-sm text-base-content/50 mt-1.5 leading-relaxed line-clamp-2">A deep dive into best practices for structuring your Express app, handling errors gracefully, validating inputs, and writing clean, maintainable API code.</p>
+                <span class="text-xs text-base-content/35 mt-2 inline-block">Jan 12, 2025 · 8 min read</span>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-base-content/30 group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card group" target="_blank" rel="noopener">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <h3 class="font-medium text-base-content group-hover:text-primary transition-colors leading-snug">Understanding React's Reconciliation Algorithm</h3>
+                <p class="text-sm text-base-content/50 mt-1.5 leading-relaxed line-clamp-2">How React's diffing algorithm works under the hood, why the virtual DOM matters, and practical tips to optimize re-renders in your applications.</p>
+                <span class="text-xs text-base-content/35 mt-2 inline-block">Nov 28, 2024 · 6 min read</span>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-base-content/30 group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card group" target="_blank" rel="noopener">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <h3 class="font-medium text-base-content group-hover:text-primary transition-colors leading-snug">Docker for Developers: From Zero to Production</h3>
+                <p class="text-sm text-base-content/50 mt-1.5 leading-relaxed line-clamp-2">A practical guide to containerizing your Node.js and React apps with Docker, writing clean Dockerfiles, and setting up docker-compose for local development.</p>
+                <span class="text-xs text-base-content/35 mt-2 inline-block">Sep 5, 2024 · 10 min read</span>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-base-content/30 group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card group" target="_blank" rel="noopener">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <h3 class="font-medium text-base-content group-hover:text-primary transition-colors leading-snug">JWT Authentication with TypeScript and Node.js</h3>
+                <p class="text-sm text-base-content/50 mt-1.5 leading-relaxed line-clamp-2">Implementing secure JWT-based auth from scratch — access tokens, refresh tokens, httpOnly cookies, token rotation, and protecting routes properly.</p>
+                <span class="text-xs text-base-content/35 mt-2 inline-block">Jul 19, 2024 · 7 min read</span>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-base-content/30 group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- ─── SKILLS ──────────────────────────────────────────────────── -->
+      <section id="skills" class="fade-in-up">
+        <h2 class="section-title">Skills &amp; Technologies</h2>
+
+        <div class="mt-6 space-y-6">
+
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-base-content/35 mb-3 font-medium">Frontend</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge">React</span>
+              <span class="skill-badge">Next.js</span>
+              <span class="skill-badge">TypeScript</span>
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">HTML / CSS</span>
+              <span class="skill-badge">Tailwind CSS</span>
+              <span class="skill-badge">Framer Motion</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-base-content/35 mb-3 font-medium">Backend</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge">Node.js</span>
+              <span class="skill-badge">Express.js</span>
+              <span class="skill-badge">Django</span>
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">Java</span>
+              <span class="skill-badge">REST APIs</span>
+              <span class="skill-badge">GraphQL</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-base-content/35 mb-3 font-medium">Database &amp; Cloud</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge">PostgreSQL</span>
+              <span class="skill-badge">MongoDB</span>
+              <span class="skill-badge">Redis</span>
+              <span class="skill-badge">Prisma</span>
+              <span class="skill-badge">SQL</span>
+              <span class="skill-badge">AWS</span>
+              <span class="skill-badge">Vercel</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xs uppercase tracking-widest text-base-content/35 mb-3 font-medium">Tools &amp; Others</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">GitHub</span>
+              <span class="skill-badge">Docker</span>
+              <span class="skill-badge">Linux</span>
+              <span class="skill-badge">Figma</span>
+              <span class="skill-badge">Postman</span>
+              <span class="skill-badge">VS Code</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ─── CONTACT ─────────────────────────────────────────────────── -->
+      <section id="contact" class="fade-in-up pb-4">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="text-base-content/55 text-sm md:text-base leading-relaxed mt-4 max-w-md">
+          I'm currently open to new opportunities and collaborations. Whether you have a project in mind or just want to say hi, feel free to reach out!
+        </p>
+        <a href="mailto:upendra@example.com" class="btn btn-primary btn-sm mt-6 rounded-full px-6 font-medium">
+          Send an email →
+        </a>
+      </section>
+
+    </main>
+
+    <!-- ─── FOOTER ─────────────────────────────────────────────────── -->
+    <footer class="border-t border-base-content/5 px-6 md:px-16 py-8 text-center">
+      <p class="text-xs text-base-content/30">
+        Designed &amp; built by <span class="text-base-content/50">Upendra Sahu</span> · © 2025
+      </p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="index.js"></script>
+  </body>
 </html>
