@@ -8,3 +8,18 @@ body {
   font-family: system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+/* ─── Aceternity UI: Dot Background ──── */
+.dot-bg {
+  background-color: #000000;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Radial fade mask — makes edges darker so content stands out */
+.dot-mask {
+  background: radial-gradient(ellipse at center,
+      transparent 0%,
+      rgba(0, 0, 0, 0.85) 80%,
+      rgba(0, 0, 0, 0.97) 100%);
+}

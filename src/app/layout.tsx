@@ -13,7 +13,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {/* ── Aceternity UI Dot Background ── */}
+        <div className="dot-bg min-h-screen w-full relative">
+          {/* Radial gradient fade overlay */}
+          <div className="dot-mask pointer-events-none fixed inset-0 z-0" />
+
+          {/* Page content sits above the overlay */}
+          <div className="relative z-10">
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
