@@ -4,7 +4,6 @@
 :root,
 [data-theme="dark"] {
   --bg: #000000;
-  --grid-color: rgba(255, 255, 255, 0.06);
   --text: #e5e7eb;
   --text-muted: rgba(229, 231, 235, 0.55);
   --surface: rgba(15, 15, 15, 0.85);
@@ -14,10 +13,9 @@
 
 [data-theme="light"] {
   --bg: #ffffff;
-  --grid-color: rgba(0, 0, 0, 0.06);
   --text: #111827;
   --text-muted: rgba(17, 24, 39, 0.55);
-  --surface: rgba(255, 255, 255, 0.85);
+  --surface: rgba(255, 255, 255, 0.9);
   --border: rgba(0, 0, 0, 0.1);
   --primary: #7c3aed;
 }
@@ -27,20 +25,23 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ─── Aceternity Dot Background on body ── */
 body {
   font-family: system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: var(--text);
-  background-color: var(--bg);
+  min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* Dark mode: white dots on black */
+  background-color: #000000;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.45) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
-/* ─── Aceternity Small Grid Background ─── */
-.grid-bg {
-  background-color: var(--bg);
-  background-image:
-    linear-gradient(var(--grid-color) 1px, transparent 1px),
-    linear-gradient(to right, var(--grid-color) 1px, transparent 1px);
-  background-size: 40px 40px;
-  transition: background-color 0.3s ease;
+/* Light mode: dark dots on white */
+[data-theme="light"] body {
+  background-color: #ffffff;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.35) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
