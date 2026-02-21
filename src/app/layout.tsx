@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import ThemeToggleButton from "@/components/ThemeToggleButton";
 
 export const metadata: Metadata = {
   title: "Upendra Sahu",
@@ -14,16 +16,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* ── Aceternity UI Dot Background ── */}
-        <div className="dot-bg min-h-screen w-full relative">
-          {/* Radial gradient fade overlay */}
-          <div className="dot-mask pointer-events-none fixed inset-0 z-0" />
+        <ThemeProvider>
+          {/* Fixed top-right day/night toggle */}
+          <ThemeToggleButton />
 
-          {/* Page content sits above the overlay */}
-          <div className="relative z-10">
+          {/* Aceternity small grid background */}
+          <div className="grid-bg min-h-screen w-full">
             {children}
           </div>
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );

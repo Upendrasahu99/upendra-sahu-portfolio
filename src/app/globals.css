@@ -1,5 +1,28 @@
 @import "tailwindcss";
 
+/* ─── Theme Variables ──────────────────── */
+:root,
+[data-theme="dark"] {
+  --bg: #000000;
+  --grid-color: rgba(255, 255, 255, 0.06);
+  --text: #e5e7eb;
+  --text-muted: rgba(229, 231, 235, 0.55);
+  --surface: rgba(15, 15, 15, 0.85);
+  --border: rgba(255, 255, 255, 0.1);
+  --primary: #a78bfa;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --grid-color: rgba(0, 0, 0, 0.06);
+  --text: #111827;
+  --text-muted: rgba(17, 24, 39, 0.55);
+  --surface: rgba(255, 255, 255, 0.85);
+  --border: rgba(0, 0, 0, 0.1);
+  --primary: #7c3aed;
+}
+
+/* ─── Base ─────────────────────────────── */
 html {
   scroll-behavior: smooth;
 }
@@ -7,19 +30,17 @@ html {
 body {
   font-family: system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  color: var(--text);
+  background-color: var(--bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ─── Aceternity UI: Dot Background ──── */
-.dot-bg {
-  background-color: #000000;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-
-/* Radial fade mask — makes edges darker so content stands out */
-.dot-mask {
-  background: radial-gradient(ellipse at center,
-      transparent 0%,
-      rgba(0, 0, 0, 0.85) 80%,
-      rgba(0, 0, 0, 0.97) 100%);
+/* ─── Aceternity Small Grid Background ─── */
+.grid-bg {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+  transition: background-color 0.3s ease;
 }
