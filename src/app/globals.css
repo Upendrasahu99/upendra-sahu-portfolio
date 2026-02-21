@@ -27,7 +27,7 @@ html {
 
 /* ─── Aceternity Dot Background on body ── */
 body {
-  font-family: system-ui, sans-serif;
+  font-family: "Instagram Sans", "Inter", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: var(--text);
   min-height: 100vh;
