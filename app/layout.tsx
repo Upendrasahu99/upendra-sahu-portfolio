@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.variable}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased md:mx-[25%] py-[5%]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-[5%] md:mx-[25%] py-[5%]`}
       >
             {children}
       </body>
