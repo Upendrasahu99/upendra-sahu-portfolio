@@ -1,4 +1,5 @@
 export type Project = {
+  slug: string;
   title: string;
   description: string;
   image: string;
@@ -10,6 +11,7 @@ export type Project = {
 
 export const projectList: Project[] = [
   {
+    slug: "project-one",
     title: "Project Name",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, veniam.",
@@ -20,6 +22,7 @@ export const projectList: Project[] = [
     tags: ["React", "Tailwind", "Node.js"],
   },
   {
+    slug: "project-two",
     title: "Project Name",
     description: "Project Description",
     image: "https://avatar.vercel.sh/shadcn2",
@@ -29,6 +32,7 @@ export const projectList: Project[] = [
     tags: ["Next.js", "TypeScript"],
   },
   {
+    slug: "project-three",
     title: "Project Name",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
@@ -39,6 +43,7 @@ export const projectList: Project[] = [
     tags: ["React", "Firebase"],
   },
   {
+    slug: "project-four",
     title: "Project Name",
     description: "Project Description",
     image: "https://avatar.vercel.sh/shadcn4",

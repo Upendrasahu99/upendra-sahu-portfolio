@@ -6,8 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { RiExternalLinkLine, RiGithubFill } from "@remixicon/react";
+import { RiExternalLinkLine } from "@remixicon/react";
 import type { Project } from "@/data/projects";
+import Link from "next/link";
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
@@ -26,14 +27,14 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         <div className="absolute top-3 right-3 z-10">
           <Badge
             className={`text-xs font-semibold shadow-sm ${project.isLive
-                ? "bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300 hover:bg-green-100"
-                : "bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 hover:bg-amber-100"
+              ? "bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300 hover:bg-green-100"
+              : "bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 hover:bg-amber-100"
               }`}
           >
             <span
               className={`inline-block w-1.5 h-1.5 rounded-full mr-1.5 ${project.isLive
-                  ? "bg-green-500 animate-pulse"
-                  : "bg-amber-500"
+                ? "bg-green-500 animate-pulse"
+                : "bg-amber-500"
                 }`}
             />
             {project.isLive ? "Live" : "In Progress"}
@@ -46,40 +47,17 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         <CardDescription className="line-clamp-2 text-sm leading-relaxed">
           {project.description}
         </CardDescription>
-
-        {/* Tech stack tags */}
-        <div className="flex flex-wrap gap-1.5 pt-1">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-[11px] font-medium px-2 py-0.5 rounded-full bg-neutral-100 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
       </CardHeader>
 
       <CardFooter className="p-0 mt-auto border-t border-neutral-100 dark:border-neutral-800">
         <div className="flex w-full">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-1.5 py-2.5 text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer border-r border-neutral-100 dark:border-neutral-800"
-          >
-            <RiGithubFill className="w-4 h-4" />
-            Code
-          </a>
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={`/projects/${project.slug}`}
             className="flex-1 flex items-center justify-center gap-1.5 py-2.5 text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
           >
             <RiExternalLinkLine className="w-4 h-4" />
-            Demo
-          </a>
+            View
+          </Link>
         </div>
       </CardFooter>
     </Card>
