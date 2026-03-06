@@ -67,7 +67,7 @@ const SkillBadge = ({ skill }: { skill: Skill }) => {
                      transition-all duration-200 cursor-pointer
                      bg-transparent hover:bg-neutral-50 dark:hover:bg-neutral-800/60"
         >
-          <span className="text-base leading-none">{skill.icon}</span>
+          <skill.icon className="w-4 h-4 shrink-0" />
           <span>{skill.name}</span>
         </button>
       </PopoverTrigger>
@@ -79,7 +79,7 @@ const SkillBadge = ({ skill }: { skill: Skill }) => {
         {/* Header */}
         <div className="px-3 py-2.5 border-b border-neutral-100 dark:border-neutral-800">
           <p className="text-sm font-semibold flex items-center gap-1.5">
-            <span className="text-base">{skill.icon}</span>
+            <skill.icon className="w-4 h-4 shrink-0" />
             {skill.name}
           </p>
         </div>
