@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { RiGithubFill, RiLinkedinFill, RiMailFill, RiTwitterXFill, RiYoutubeFill } from "@remixicon/react";
 import { useEffect, useState } from "react";
 
@@ -29,10 +30,14 @@ export const Profile = () => {
         {/* Decorative ring */}
         <div className="absolute -inset-1.5 rounded-full border-2 border-dashed border-neutral-300 dark:border-neutral-600 animate-[spin_20s_linear_infinite]" />
         {/* Avatar circle */}
-        <div className="relative w-24 h-24 rounded-full bg-linear-to-br from-neutral-800 to-neutral-950 dark:from-neutral-200 dark:to-neutral-400 flex items-center justify-center select-none shadow-lg">
-          <span className="text-2xl font-bold tracking-wide text-white dark:text-neutral-900">
-            US
-          </span>
+        <div className="relative w-24 h-24 rounded-full overflow-hidden shadow-lg">
+          <Image
+            src="/profile.png"
+            alt="Upendra Sahu"
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
       </div>
 
